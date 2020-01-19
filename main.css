@@ -1,0 +1,67 @@
+.wrap {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    width: 700px;
+}
+
+.section {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    visibility: hidden;
+}
+
+.error {
+    color: red;
+}
+
+.content {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid gray;
+    order: 1;
+    margin-top: -1px;
+    border-radius: 5px;
+}
+
+.button {
+    margin-left: -110px;
+    border-radius: 5px;
+    font-weight: bold;
+    height: 40px;
+    border: 1px solid gray;
+    outline: none;
+    cursor: pointer;
+}
+
+.label {
+    width: 60px;
+    height: 20px;
+    background: lightgray;
+    border: 1px solid gray;
+    padding: 10px 10px;
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.active {
+    background-color: green;
+}
+
+input[type=radio], .content {
+    display: none;
+}
+
+input[type=radio]:checked + .label {
+    background-color: linen;
+    border-bottom: 1px solid linen;
+}
+
+input[type=radio]:checked + .label + .content {
+    display: block;
+    background-color: linen;
+}
